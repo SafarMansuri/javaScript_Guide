@@ -17,8 +17,6 @@ let accountAddress;
 
 console.table([accountId,accountName,accountPassWord,accountState,accountAddress]);
 
-
-
 console.log(Hoisting)
 const Hoisting = 2;
 
