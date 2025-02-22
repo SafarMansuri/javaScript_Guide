@@ -108,9 +108,24 @@ console.log(Object.entries(realuser)); // returns array of single keys and value
 console.log(realuser.hasOwnProperty("safar")); // true
 // above methods works with the keys only not values
 
+// Object destrucring in js
+const newUserObj = {
+    name: "safar",
+    email: "safar@gmail.com",
+    mobileNumber: 3454443455
+}
+// object destructring is nothing but the way of accessing the objects
+
+// we can access objects like this
+
+//  newUserObj.email
+
+const {mobileNumber : phone} = newUserObj;
 
 
+console.log(phone);
 
+// like above we can destructure an object and access the values of the objects
 
 
 
