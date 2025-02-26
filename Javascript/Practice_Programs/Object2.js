@@ -107,4 +107,4 @@ const orders = [
        acc + total.items.reduce((sum, purchaseditem) => (sum + purchaseditem.quantity),0)
    ),0)
 
-   console.log("alitems",allitemtotal)
+   console.log("alitems",allitemtotal);
