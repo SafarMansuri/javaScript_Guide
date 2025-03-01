@@ -108,3 +108,5 @@ const orders = [
    ),0)
 
    console.log("alitems",allitemtotal);
+
+   //FIXING UP THE RESPOSITORY ISSUE
