@@ -1,0 +1,286 @@
+Retrieval Augmented Generation (RAG) in Azure AI Search
+
+
+
+// funtion declarations
+
+function one() {
+    
+}
+
+
+const addtwo = function(num) {
+    return num + 2;
+}
+
+// arrow function
+const addtwo1 = (num) =>  {
+    return num + 2;
+}
+// console.log(addtwo(2));
+// arrow function
+
+
+// there are more diffrant ways of declaring the arrow function
+
+
+// const addnum = (num) => { return num }
+
+// for single line we can return without any braces {}
+// const addnum = (num) => num;
+
+// const addnum = (num) => (num);
+
+// auto return
+const addnum = (num) =>  (
+    num
+);
+
+
+// console.log(addnum(2))
+// if we use curly braces than we have to provide the return keyword for returning the values
+
+
+// IIFE in js
+
+// Immediatly Invoked funtion Expressions (IIFE)
+
+(function one() {
+    console.log("IIFE executed..")
+})();
+
+// arrow iife
+
+(() => {
+ console.log("IIFE executed..")
+})();
+
+// parametarized arrow iife
+((name) => {
+    console.log("parametarized iife",name)
+})("safar");
+// functions in js
+
+// simple function declaration
+function one(){
+    
+}
+// function with return type
+function two(num1, num2){
+    return num1 + num2;
+}
+// holding function in variable
+
+const fun = function(num1, num2)
+{
+    return num1 + num2;
+}
+
+console.log(fun(1,2));
+
+// arrow functions
+/*
+const addtwo = (num) => {
+    return num + 2;
+}*/
+
+// const addtwo = (num) => num + 3;
+
+// const addtwo = (num) => (num + 4);
+
+// const addtwo = (num) => (
+//       num * 4
+//     )
+
+// console.log(addtwo(3))
+
+// IIFE in js
+
+(function one() {
+    console.log("one function")
+})();
+
+(() => {
+    console.log("arrow iife")
+})();
+
+(() => (
+     console.log("arrow iife ")
+    ))();
+    
+    const month = 4;
+switch (month) {
+    case 2:
+        console.log("2")
+        break;
+
+    default:
+     console.log("defaly case matcched")
+        break;
+}
+    
+    
+    
+for(let i = 75; i >= 0; i -= 5){
+    console.log(i);
+}
+
+truthy and falsy values in js
+
+
+loops in js
+
+for with arrays break and continue
+
+
+while and do while in js
+
+
+Scope in js 
+=============
+
+js clauser
+===========
+
+
+mini hoisting in js
+
+value of this
+
+arrow functions in js
+
+IIFE
+
+javascript execution + call stack
+
+javascript execution context
+
+
+//Iterable is the term to describe a sequence that can be looped over one by one. Enumerable is sets with each element typically mapped to a natural number or index
+
+const myobject = {
+    "js" : "Javascript",
+    "ES" : "EcmaScript",
+    "c++" : "c plus plus",
+    "c#" : "c sharp"
+}
+
+// high order array loops
+
+
+const myarry2 =  ["js",1,3,true, "string"];
+// for in loop we are using to access the keys of objects
+
+for(const val in myobject){
+    console.log("key",val, "value",myobject[val])
+}
+
+// for of mostly use to access array values
+
+for (const arr of myarry2){
+    console.log("val", arr)
+}
+
+=============================
+
+forEach
+=======
+
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+
+coding.forEach(function (val) {
+   // console.log(val)
+})
+
+// for each with arrow
+
+coding.forEach((val) => {
+    //console.log(val)
+})
+
+// directly return
+
+coding.forEach((val) => console.log(val) )
+
+coding.forEach( (item, index, arr)=> {
+    console.log(item, index, arr);
+} )
+const myCoding = [
+    {
+        languageName: "javascript",
+        languageFileName: "js"
+    },
+    {
+        languageName: "java",
+        languageFileName: "java"
+    },
+    {
+        languageName: "python",
+        languageFileName: "py"
+    },
+]
+
+myCoding.forEach((val) => {
+    
+    console.log(val.languageName)
+});
+
+
+myCoding.forEach((val, index, wholearray) => {
+    
+    console.log(val.languageName, index, wholearray[index])
+});
+
+
+map
+===
+
+const numbers = [1,2,3,4,5,6,7,8,9,10];
+
+// print all the numbers
+
+// numbers.forEach((item) => console.log(item))
+
+// filter numbers > 5
+
+const numbergreater5 = numbers.filter((item) => item >5 );
+console.log(numbergreater5);
+
+
+// with paranthesis
+
+const numbergreatethan6 = numbers.filter((item) => (item > 6))
+console.log(numbergreatethan6)
+
+// with return keyword
+
+const greatertan7 = numbers.filter((item) => {
+    return item > 7;
+})
+
+console.log(greatertan7);
+
+// condition based filer
+
+const extract8 = numbers.filter((item) => {
+     return item == 8; 
+})
+
+console.log(extract8)
+
+
+// map through whole object
+
+const mapthrough = numbers.map((item) => (item))
+
+console.log(numbers.map((item) => (item)))
+console.log(numbers.map((item) => (item)))
+
+
+
+
+
+
+
+
