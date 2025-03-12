@@ -62,23 +62,58 @@ const students = [
 
 // 4️⃣ Find the student with the highest English score.
 
-// const highestScore = students.map((item) => {
-//     let englishscore =  item.scores.english;
-//     return englishscore.Sort((a,b) => (a - b))
-// })
+const HighestEnglishscore = students.reduce( (acc,stu) => {
+    // console.log(` acc ${acc.scores.english} and student ${stu.scores.english} `);
+    
+    return stu.scores.english > acc.scores.english ? stu : acc
+},students[0] )
 
-// console.log(highestScore);
-
+// console.log("HighestEnglishscore",HighestEnglishscore);
 
 // 5️⃣ Check if any student has an attendance record with all true (100% attendance).
  
 
+const findalltrue = students.some( (stu) => stu.attendance.every(day => day))
+// console.log("findalltrue",findalltrue);
+
 // 🟠 Intermediate Challenges
 // 6️⃣ Sort students by their math scores in descending order.
+
+  const sortStudentDESC = [...students].sort( (a, b) => (b.scores.math - a.scores.math));
+//   console.log("sortStudentDESC",sortStudentDESC);
+  
+
 // 7️⃣ Find the student with the lowest science score.
+const lowestScienceScore = students.reduce( (acc,stu) => {
+    // console.log(` acc ${acc.scores.science} and student ${stu.scores.science} `);
+    
+    return stu.scores.science > acc.scores.science ? acc : stu
+},students[0] )
+
+// console.log("lowestScienceScore",lowestScienceScore);
+
+
 // 8️⃣ Create an array of objects containing student names and their average scores.
+
+const studentnamesandscores = students.map( ({name , scores}) => (
+    {
+        name:name,
+        averagescores : Math.round(scores.english + scores.math + scores.science / 3)
+    }
+) )
+// console.log("studentnamesandscores",studentnamesandscores);
+
 // 9️⃣ Get a list of students who have missed at least 2 classes.
+const studentwithmissdclasses = students.filter((stu) => (
+    stu.attendance.filter(attendance => !attendance)
+))
+
+// console.log("studentwithmissdclasses",studentwithmissdclasses);
+
 // 🔟 Check if all students have an English score of at least 75.
+const allstudentenglishscore = students.every((stu) => (stu.scores.english > 75))
+// console.log("allstudentenglishscore",allstudentenglishscore);
+
 
 // 🔴 Advanced Challenges
 // 1️⃣1️⃣ Group students by gender.
